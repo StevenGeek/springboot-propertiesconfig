@@ -1,10 +1,9 @@
 package com.steven.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.PropertySource;
 
 @ConfigurationProperties(prefix = "SpringBoot")
-@PropertySource("classpath:config/custom.properties")
+// @PropertySource("classpath:config/custom.properties")
 public class CustomSpringBootAppReadProperties {
     private String custom;
     private Difficult difficult;
