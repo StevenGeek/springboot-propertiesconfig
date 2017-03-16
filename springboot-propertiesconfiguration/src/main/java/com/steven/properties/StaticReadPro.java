@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @PropertySource("classpath:config/custom.properties")
 public class StaticReadPro {
-    @Value("${static.proA}")
+
     // @Value("${custom.property}")
     private static String staticPro;
 
@@ -15,7 +15,8 @@ public class StaticReadPro {
         return staticPro;
     }
 
-    public static void setStaticPro(String staticPro) {
+    @Value("${static.proA}")
+    public void setStaticPro(String staticPro) {
         StaticReadPro.staticPro = staticPro;
     }
 }
