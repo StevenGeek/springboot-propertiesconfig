@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class ReadPropertiesByEnvAndRelax implements InitializingBean {
     @Autowired
     private Environment environment;
-
+1
     @PostConstruct
     public void envRead() {
         System.out.println(environment.getProperty("com.steven.test"));
